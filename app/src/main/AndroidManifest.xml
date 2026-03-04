@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VK_Education">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.FirstActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.VK_Education">
