@@ -9,11 +9,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -24,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ru.kazan.itis.bikmukhametov.vk_education.R
 import ru.kazan.itis.bikmukhametov.vk_education.ui.theme.VK_EducationTheme
+import androidx.core.net.toUri
 
 class FirstActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +37,9 @@ class FirstActivity : ComponentActivity() {
 
                 var textState by rememberSaveable { mutableStateOf("") }
 
+                val phoneRegex = Regex("""^\+?[0-9\-\(\)\s]{7,15}$""")
+                val isPhoneValid = textState.matches(phoneRegex)
+
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(
                         modifier = Modifier
@@ -43,7 +49,8 @@ class FirstActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        TextField(
+
+                        OutlinedTextField(
                             value = textState,
                             onValueChange = { textState = it },
                             label = {
@@ -52,6 +59,7 @@ class FirstActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxWidth()
                         )
 
+                        // Переход на вторую активити
                         Button(
                             onClick = {
                                 val intent =
@@ -60,10 +68,31 @@ class FirstActivity : ComponentActivity() {
                                     }
                                 startActivity(intent)
                             },
-                            modifier = Modifier.padding(top = 16.dp)
+                            modifier = Modifier
+                                .height(64.dp)
+                                .padding(vertical = 8.dp)
                         ) {
                             Text(stringResource(R.string.open_second_activity))
                         }
+
+                        // Лучше звоните Солу
+                        Button(
+                            onClick = {
+                                if (isPhoneValid) {
+                                    val dialIntent = Intent(Intent.ACTION_DIAL).apply {
+                                        data = "tel:$textState".toUri()
+                                    }
+                                    startActivity(dialIntent)
+                                }
+                            },
+                            enabled = isPhoneValid,
+                            modifier = Modifier
+                                .height(64.dp)
+                                .padding(vertical = 8.dp)
+                        ) {
+                            Text(stringResource(R.string.call_friend))
+                        }
+
                     }
                 }
             }
