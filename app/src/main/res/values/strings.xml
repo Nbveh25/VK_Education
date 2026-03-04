@@ -4,4 +4,7 @@
     <string name="open_second_activity">Открыть вторую Activity</string>
     <string name="no_data_received">No data received</string>
     <string name="call_friend">Позвонить другу</string>
+    <string name="share_text">Поделиться текстом</string>
+    <string name="data_tel">tel:%1$s</string>
+    <string name="mime_text_plain">text/plain</string>
 </resources>
