@@ -1,4 +1,4 @@
-package ru.kazan.itis.bikmukhametov.vk_education.ui.theme
+package ru.kazan.itis.bikmukhametov.vkeducation.ui.theme
 
 
 import androidx.compose.ui.unit.dp

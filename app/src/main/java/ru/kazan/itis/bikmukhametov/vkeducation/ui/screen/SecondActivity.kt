@@ -1,4 +1,4 @@
-package ru.kazan.itis.bikmukhametov.vk_education.ui.screen
+package ru.kazan.itis.bikmukhametov.vkeducation.ui.screen
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,8 +12,8 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import ru.kazan.itis.bikmukhametov.vk_education.R
-import ru.kazan.itis.bikmukhametov.vk_education.ui.screen.FirstActivity.Companion.EXTRA_TEXT
-import ru.kazan.itis.bikmukhametov.vk_education.ui.theme.VK_EducationTheme
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.screen.FirstActivity.Companion.EXTRA_TEXT
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.VKEducationTheme
 
 class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class SecondActivity : ComponentActivity() {
         val receivedText = intent.getStringExtra(EXTRA_TEXT) ?: getString(R.string.no_data_received)
 
         setContent {
-            VK_EducationTheme {
+            VKEducationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(
                         modifier = Modifier

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.kazan.itis.bikmukhametov.vk_education"
+    namespace = "ru.kazan.itis.bikmukhametov.vkeducation"
     compileSdk {
         version = release(36)
     }

@@ -1,6 +1,5 @@
-package ru.kazan.itis.bikmukhametov.vk_education.ui.theme
+package ru.kazan.itis.bikmukhametov.vkeducation.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,6 +9,12 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Pink40
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Pink80
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Purple40
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Purple80
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.PurpleGrey40
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -34,7 +39,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun VK_EducationTheme(
+fun VKEducationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
