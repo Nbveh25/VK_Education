@@ -11,7 +11,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import ru.kazan.itis.bikmukhametov.vk_education.R
+import ru.kazan.itis.bikmukhametov.vkeducation.R
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.screen.FirstActivity.Companion.EXTRA_TEXT
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.VKEducationTheme
 
