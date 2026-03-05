@@ -4,3 +4,6 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.detekt.plugin) apply false
 }
+
+extra["versionName"] = "1.0.0"
+extra["versionCode"] = 1
