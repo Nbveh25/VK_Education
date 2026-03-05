@@ -7,13 +7,13 @@ plugins {
 android {
     namespace = "ru.kazan.itis.bikmukhametov.vkeducation"
     compileSdk {
-        version = release(36)
+        version = release(libs.versions.compileSdk.get().toInt())
     }
 
     defaultConfig {
         applicationId = "ru.kazan.itis.bikmukhametov.vk_education"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
