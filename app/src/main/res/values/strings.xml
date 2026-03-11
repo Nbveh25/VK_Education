@@ -1,4 +1,5 @@
 <resources>
+    <!-- Существующие строки -->
     <string name="app_name">VK_Education</string>
     <string name="enter_text">Введите текст</string>
     <string name="open_second_activity">Открыть вторую Activity</string>
@@ -7,4 +8,49 @@
     <string name="share_text">Поделиться текстом</string>
     <string name="data_tel">tel:%1$s</string>
     <string name="mime_text_plain">text/plain</string>
+
+    <!-- 🔹 App Details: Labels -->
+    <string name="app_details_age">Возраст</string>
+    <string name="app_details_size">Размер</string>
+    <string name="app_details_developer">Разработчик</string>
+    <string name="app_details_category">Категория</string>
+
+    <!-- 🔹 App Description -->
+    <string name="app_description_title">Описание приложения</string>
+    <string name="app_description_read_more">Подробнее</string>
+    <string name="app_description_read_less">Скрыть</string>
+
+    <!-- 🔹 Install Button: Основные состояния -->
+    <string name="install">Установить</string>
+
+    <string name="app_details_screenshots">Скриншоты</string>
+
+    <!-- 🔹 App Details: Categories (используем префикс для группировки) -->
+    <string name="category_app">Приложения</string>
+    <string name="category_game">Игры</string>
+    <string name="category_productivity">Производительность</string>
+    <string name="category_social">Социальные сети</string>
+    <string name="category_education">Образование</string>
+    <string name="category_entertainment">Развлечения</string>
+    <string name="category_music">Музыка</string>
+    <string name="category_video">Видео</string>
+    <string name="category_photography">Фотография</string>
+    <string name="category_health">Здоровье</string>
+    <string name="category_sports">Спорт</string>
+    <string name="category_news">Новости</string>
+    <string name="category_books">Книги</string>
+    <string name="category_business">Бизнес</string>
+    <string name="category_finance">Финансы</string>
+    <string name="category_travel">Путешествия</string>
+    <string name="category_maps">Карты</string>
+    <string name="category_food">Еда</string>
+    <string name="category_shopping">Покупки</string>
+    <string name="category_utilities">Утилиты</string>
+
+    <!-- 🔹 App Details Mock (для превью/тестов) -->
+    <string name="app_details_mock_hero_guild_name">Гильдия Героев: Экшен ММО РПГ</string>
+    <string name="app_details_mock_hero_guild_developer">VK Play</string>
+    <string name="app_details_mock_hero_guild_description">
+        Легендарный рейд героев в фэнтези-RPG. Станьте героем гильдии и сразите мастера подземелья!
+    </string>
 </resources>

@@ -9,23 +9,28 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.DarkBackground
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.LightBackground
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Pink40
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Pink80
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Purple40
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.Purple80
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.PurpleGrey40
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.PurpleGrey80
+import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color.RuStoreBlue
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
+    primary = RuStoreBlue,
     secondary = PurpleGrey80,
-    tertiary = Pink80
+    tertiary = Pink80,
+    background = DarkBackground,
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = RuStoreBlue,
     secondary = PurpleGrey40,
-    tertiary = Pink40
+    tertiary = Pink40,
+    background = LightBackground,
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -42,7 +47,7 @@ private val LightColorScheme = lightColorScheme(
 fun VKEducationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
