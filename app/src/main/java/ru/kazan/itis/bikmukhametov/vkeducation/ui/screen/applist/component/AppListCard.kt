@@ -14,12 +14,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import ru.kazan.itis.bikmukhametov.vkeducation.domain.applist.AppInfo
-import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Color
 import ru.kazan.itis.bikmukhametov.vkeducation.ui.theme.Dimens
 
 @Composable
@@ -52,17 +52,15 @@ fun AppCard(
                 text = app.name,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color.Pink40
             )
             Text(
                 text = app.description,
                 fontSize = 14.sp,
-                color = Color.Pink80
             )
             Text(
                 text = app.category,
                 fontSize = 12.sp,
-                color = Color.PurpleGrey80
+                color = Color.Black.copy(alpha = 0.5f)
             )
         }
     }
