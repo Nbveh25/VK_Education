@@ -49,26 +49,3 @@ fun AppDescription(
     }
 }
 
-@Preview
-@Composable
-private fun PreviewShort() {
-    VKEducationTheme {
-        AppDescription(
-            description = "Легендарный рейд героев в Фэнтези РПГ. Станьте героем гильдии и зразите мастера подземелья!",
-            onReadMoreClick = {},
-            collapsed = false,
-        )
-    }
-}
-
-@Preview
-@Composable
-private fun PreviewCollapsed() {
-    VKEducationTheme {
-        AppDescription(
-            description = "Легендарный рейд героев в Фэнтези РПГ. Станьте героем гильдии и зразите мастера подземелья!",
-            onReadMoreClick = {},
-            collapsed = true,
-        )
-    }
-}
